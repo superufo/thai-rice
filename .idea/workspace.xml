@@ -2,56 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a48e32-ab21-4997-aaa8-c2f12945de62" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/yay.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/thai-rice-git.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.roadhogrc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.roadhogrc.mock.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/proxy.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ChdMenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/MenuCarousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TopMenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/footer.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/footer.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/header.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/header.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/main.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/example.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/router.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/index.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/index.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/page01.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/page01.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/page02.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/page02.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/page03.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/page03.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/example.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/request.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/stringUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/screenshot.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -356,12 +307,12 @@
       <updated>1524898776571</updated>
       <workItem from="1524898781488" duration="894000" />
       <workItem from="1524899693778" duration="16021000" />
-      <workItem from="1525007874230" duration="9476000" />
+      <workItem from="1525007874230" duration="9763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26391000" />
+    <option name="totallyTimeSpent" value="26678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
