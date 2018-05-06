@@ -25,3 +25,14 @@ npm install eslint-plugin-react  --save
 npm install eslint-plugin-import  --save
 
 npm install --save babel-polyfill  //es6新语法支持
+
+
+history 监听
+采用观察者模式，在location改变时，history会发出通知。每一个history对象都有listen方法，接受一个函数作为参数。这个函数会被添加到history储存的监听函数数组中。
+当location变化时（如代码调用history方法或用户点击浏览器按钮），history对象将会调用所有listener方法。这能让你在location变化时来设置代码更新。
+
+react-redux  connect      connect(mapStateToProps, mapDispatchToProps, mergeProps, options = {}) 
+dva          connect      export default connect(从 model 的 state 中获取数据)(要将数据绑定到哪个组件)
+
+withRouter 函数，页面进行路由跳转时触发该函数
+props.match 对于知道详情页面渲染的 userId 以及如何编写我们的路由是很有用的。match 对象给我们提供了几个属性，包括 match.params、match.path、match.url

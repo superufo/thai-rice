@@ -4,7 +4,7 @@ import {
   connect
 } from 'dva';
 
-import styles from './page02.less';
+import styles from './order.less';
 
 import Main from '../layouts/main.jsx';
 

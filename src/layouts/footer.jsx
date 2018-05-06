@@ -24,8 +24,8 @@ function Footer({
         hidden={false}
       >
         <TabBar.Item
-          title="生活"
-          key="生活"
+          title="首页"
+          key="首页"
           icon={
             <div style={{
               width: '22px',
@@ -48,8 +48,8 @@ function Footer({
           {childrens}
         </TabBar.Item>
         <TabBar.Item
-          title="口碑"
-          key="口碑"
+          title="发现"
+          key="发现"
           icon={
             <div style={{
               width: '22px',
@@ -64,15 +64,15 @@ function Footer({
               background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
             />
           }
-          selected={location.pathname === '/page01'}
-          onPress={() => dispatch(routerRedux.push('/page01'))}
+          selected={location.pathname === '/discovery'}
+          onPress={() => dispatch(routerRedux.push('/discovery'))}
           data-seed="koubei"
         >
           {childrens}
         </TabBar.Item>
         <TabBar.Item
-          title="朋友"
-          key="朋友"
+          title="订单"
+          key="订单"
           icon={
             <div style={{
               width: '22px',
@@ -87,8 +87,8 @@ function Footer({
               background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
             />
           }
-          selected={location.pathname === '/page02'}
-          onPress={() => dispatch(routerRedux.push('/page02'))}
+          selected={location.pathname === '/order'}
+          onPress={() => dispatch(routerRedux.push('/order'))}
           dot
           data-seed="pengyou"
         >
@@ -111,8 +111,8 @@ function Footer({
               background: 'url(https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg) center center /  21px 21px no-repeat' }}
             />
           }
-          selected={location.pathname === '/page03'}
-          onPress={() => dispatch(routerRedux.push('/page03'))}
+          selected={location.pathname === '/my'}
+          onPress={() => dispatch(routerRedux.push('/my'))}
           data-seed="wode"
         >
           {childrens}

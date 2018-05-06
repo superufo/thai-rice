@@ -4,23 +4,23 @@ import {
   connect
 } from 'dva';
 
-import styles from './page03.less';
+import styles from './discovery.less';
 
 import Main from '../layouts/main.jsx';
 
-function Page03({
+function Page01({
   location
 }) {
   return (
     <Main location={location}>
       <div className={styles.normal}>
-        Route Component: Page03
+        Route Component: Page01
       </div>
     </Main>
   );
 }
 
-Page03.propTypes = {
+Page01.propTypes = {
   location: PropTypes.object.isRequired
 };
 
@@ -28,4 +28,4 @@ function mapStateToProps() {
   return {};
 }
 
-export default connect(mapStateToProps)(Page03);
+export default connect(mapStateToProps)(Page01);

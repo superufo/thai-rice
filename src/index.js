@@ -1,20 +1,21 @@
-import 'babel-polyfill';
+import { message } from 'antd'
 import dva from 'dva';
-
 import './index.less';
+
+import createLoading from 'dva-loading';
+import createHistory from 'history/createBrowserHistory';
+import 'babel-polyfill';
 
 // 1. Initialize
 const app = dva({
-  onError(err, dispatch) {
-    if (err.resp) {
-      console.error(err.resp.msg);
-    } else if (err.srv) {
-      console.error(err.srv.msg);
-    } else {
-      console.error(err);
-    }
-  }
-});
+    ...createLoading({
+        effects: true,
+    }),
+    history: createHistory(),
+    onError (error) {
+        message.error(error.message)
+    },
+})
 
 // 2. Plugins
 // app.use();

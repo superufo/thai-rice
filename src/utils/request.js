@@ -1,131 +1,120 @@
-import qs from 'qs';
-import _ from 'lodash';
-import Axios from 'axios';
+/* global window */
+import axios from 'axios'
+import qs from 'qs'
+import jsonp from 'jsonp'
+import lodash from 'lodash'
+import pathToRegexp from 'path-to-regexp'
+import { message } from 'antd'
+import { YQL, CORS } from './config'
 
-const reqConfig = {
-  withCredentials: true
-};
+const fetch = (options) => {
+  let {
+    method = 'get',
+    data,
+    fetchType,
+    url,
+  } = options
 
-const Request = Axios.create(reqConfig);
+  const cloneData = lodash.cloneDeep(data)
 
-function fetch(method, url, data, inConfig = false) {
-  let cancel = () => {};
-  const cancelToken = new Axios.CancelToken((c) => {
-    cancel = c;
-  });
+  try {
+    let domin = ''
+    if (url.match(/[a-zA-z]+:\/\/[^/]*/)) {
+      [domin] = url.match(/[a-zA-z]+:\/\/[^/]*/)
+      url = url.slice(domin.length)
+    }
+    const match = pathToRegexp.parse(url)
+    url = pathToRegexp.compile(url)(data)
+    for (let item of match) {
+      if (item instanceof Object && item.name in cloneData) {
+        delete cloneData[item.name]
+      }
+    }
+    url = domin + url
+  } catch (e) {
+    message.error(e.message)
+  }
 
-  const promise = (inConfig
-    ? Request[method](url, {
-      params: data,
-      cancelToken
+  if (fetchType === 'JSONP') {
+    return new Promise((resolve, reject) => {
+      jsonp(url, {
+        param: `${qs.stringify(data)}&callback`,
+        name: `jsonp_${new Date().getTime()}`,
+        timeout: 4000,
+      }, (error, result) => {
+        if (error) {
+          reject(error)
+        }
+        resolve({ statusText: 'OK', status: 200, data: result })
+      })
     })
-    : Request[method](url, data, {
-      cancelToken
+  } else if (fetchType === 'YQL') {
+    url = `http://query.yahooapis.com/v1/public/yql?q=select * from json where url='${options.url}?${encodeURIComponent(qs.stringify(options.data))}'&format=json`
+    data = null
+  }
+
+  switch (method.toLowerCase()) {
+    case 'get':
+      return axios.get(url, {
+        params: cloneData,
+      })
+    case 'delete':
+      return axios.delete(url, {
+        data: cloneData,
+      })
+    case 'post':
+      return axios.post(url, cloneData)
+    case 'put':
+      return axios.put(url, cloneData)
+    case 'patch':
+      return axios.patch(url, cloneData)
+    default:
+      return axios(options)
+  }
+}
+
+export default function request (options) {
+  if (options.url && options.url.indexOf('//') > -1) {
+    const origin = `${options.url.split('//')[0]}//${options.url.split('//')[1].split('/')[0]}`
+    if (window.location.origin !== origin) {
+      if (CORS && CORS.indexOf(origin) > -1) {
+        options.fetchType = 'CORS'
+      } else if (YQL && YQL.indexOf(origin) > -1) {
+        options.fetchType = 'YQL'
+      } else {
+        options.fetchType = 'JSONP'
+      }
+    }
+  }
+
+  return fetch(options).then((response) => {
+    const { statusText, status } = response
+    let data = options.fetchType === 'YQL' ? response.data.query.results.json : response.data
+    if (data instanceof Array) {
+      data = {
+        list: data,
+      }
+    }
+    return Promise.resolve({
+      success: true,
+      message: statusText,
+      statusCode: status,
+      ...data,
     })
-  );
+  }).catch((error) => {
+    const { response } = error
+    let msg
+    let statusCode
+    if (response && response instanceof Object) {
+      const { data, statusText } = response
+      statusCode = response.status
+      msg = data.message || statusText
+    } else {
+      statusCode = 600
+      msg = error.message || 'Network Error'
+    }
 
-  return {
-    promise,
-    cancel
-  };
-}
-
-function get(url, data) {
-  return fetch('get', url, data, true);
-}
-
-function post(url, data) {
-  return fetch('post', url, data, false);
-}
-
-function put(url, data) {
-  return fetch('put', url, data, false);
-}
-
-function patch(url, data) {
-  return fetch('patch', url, data, false);
-}
-
-function del(url, data) {
-  return fetch('delete', url, data, true);
-}
-
-function throwReqError(resp) {
-  const error = new Error(resp.statusText);
-  error.resp = resp;
-  return Promise.reject(error);
-}
-
-function checkStatus(resp) {
-  if ((resp.status >= 200) && (resp.status < 300)) {
-    return resp;
-  }
-
-  // notification.error({
-  //   message: `请求错误 ${resp.status}: ${resp.url}`,
-  //   description: resp.statusText
-  // });
-
-  return throwReqError(resp);
-}
-
-function throwSrvError(data) {
-  const error = new Error(data.msg);
-  error.srv = data;
-  return Promise.reject(error);
-}
-
-function checkCode(data) {
-  if (data && (data.code !== 0)) {
-    return throwSrvError(data);
-  }
-
-  return data;
-}
-
-function handleReqError(err) {
-  if (Axios.isCancel(err)) {
-    console.warn('Request canceled', err.message);
-  }
-
-  throw err;
-}
-
-function handleRequest(req) {
-  return {
-    ...req,
-    promise: req.promise
-      .then(checkStatus)
-      .then(resp => resp.data)
-      .then(checkCode)
-      .catch(handleReqError)
-  };
-}
-
-export function getJson(url, data) {
-  const _data = data ? _.cloneDeep(data) : {};
-  _data._t_ = _.now();
-  return handleRequest(get(url, _data));
-}
-
-export function postJson(url, data) {
-  return handleRequest(post(url, data));
-}
-
-export function postForm(url, data) {
-  return handleRequest(post(url, qs.stringify(data)));
-}
-
-export function putJson(url, data) {
-  return handleRequest(put(url, data));
-}
-
-export function patchJson(url, data) {
-  return handleRequest(patch(url, data));
-}
-
-export function deleteJson(url, data) {
-  const _data = data ? _.cloneDeep(data) : {};
-  _data._t_ = _.now();
-  return handleRequest(del(url, _data));
+    /* eslint-disable */
+    return Promise.reject({ success: false, statusCode, message: msg })
+  })
 }

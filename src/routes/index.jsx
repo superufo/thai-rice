@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  connect
-} from 'dva';
+import { connect } from 'dva';
 
 import styles from './index.less';
 import Main from '../layouts/main.jsx';
 
-import MenuCarousel from '../components/MenuCarousel';
-import TopMenu from '../components/TopMenu';
+import MenuCarousel from '../components/index/MenuCarousel';
+import TopMenu from '../components/index/TopMenu';
 
 function Index({
   location
@@ -37,8 +35,4 @@ Index.propTypes = {
   location: PropTypes.object.isRequired
 };
 
-function mapStateToProps() {
-  return {};
-}
-
-export default connect(mapStateToProps)(Index);
+export default connect( ({}) => ({}) )(Index);

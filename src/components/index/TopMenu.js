@@ -3,7 +3,7 @@ import { PubSub } from 'pubsub-js';
 
 import ChdMenu from './ChdMenu';
 
-import StringUtils from '../utils/stringUtils';
+import StringUtils from '../../utils/stringUtils';
 
 
 class TopMenu extends React.Component {
