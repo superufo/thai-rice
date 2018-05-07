@@ -8,11 +8,19 @@ import Main from '../layouts/main.jsx';
 import MenuCarousel from '../components/index/MenuCarousel';
 import TopMenu from '../components/index/TopMenu';
 
-function Index({
-  location
-}) {
+const Index =  ({
+   dispatch,location,index,loading
+}) => {
+  //
+  const isLoading = loading.effects['index/query'];
+
+  // console.log("location11111:"+location);
+  // console.log("dispatch:"+dispatch);
+  // console.log("index:"+index);
+  // console.log("isLoading:"+loading);
+
   return (
-    <Main location={location}>
+    <Main location={location}   loading={isLoading}>
       <div className={styles.normal}>
         <MenuCarousel />
       </div>
@@ -35,4 +43,4 @@ Index.propTypes = {
   location: PropTypes.object.isRequired
 };
 
-export default connect( ({}) => ({}) )(Index);
+export default connect(({ index, loading }) => ({ index, loading }))(Index);

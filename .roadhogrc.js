@@ -11,8 +11,14 @@ export default {
       'iOS >= 8',
       'Android >= 4'
     ]
-  },
-  define: {
+  }, 
+  //proxy: {
+  //      '/api': {
+  //          'target': 'http://127.0.0.1/',
+  //          'changeOrigin': true
+  //      }
+  // },
+   define: {
     'process.env.NODE_ENV': (process.env.NODE_ENV === 'production') ? 'production' : 'development'
   },
   // svgSpriteLoaderDirs: [

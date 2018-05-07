@@ -54,5 +54,19 @@
   },
   "engines": {
     "install-node": "6.11.1"
-  }
+  },
+  "name": "thai-rice-git",
+  "description": "antd mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superufo/thai-rice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superufo/thai-rice/issues"
+  },
+  "homepage": "https://github.com/superufo/thai-rice#readme"
 }

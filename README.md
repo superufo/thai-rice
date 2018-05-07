@@ -36,3 +36,22 @@ dva          connect      export default connect(从 model 的 state 中获取�
 
 withRouter 函数，页面进行路由跳转时触发该函数
 props.match 对于知道详情页面渲染的 userId 以及如何编写我们的路由是很有用的。match 对象给我们提供了几个属性，包括 match.params、match.path、match.url
+this.props.children属性就是子组件。
+
+
+.roadhogrc 是入口文件
+"proxy": { "/api": { "target": "http://localhost:8011/", "changeOrigin": true } }
+调用：
+`request('/api/users', {
+  method: 'POST',
+  body: JSON.stringify(values),
+});`
+这时程序就会向http://localhost:8011/users发送post请求。
+
+
+dva的roadhogrc配置文件webstorm或idea解析
+https://blog.csdn.net/nianhua120/article/details/77683807?locationNum=3&fps=1
+
+JSON.stringify() 方法是将一个JavaScript值(对象或者数组)转换为一个 JSON字符串
+
+npm install roadhog-api-doc -g   //https://www.npmjs.com/package/roadhog-api-doc

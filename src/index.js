@@ -1,4 +1,6 @@
-import { message } from 'antd'
+//import cookie from 'react-cookie';
+
+import { message } from 'antd';
 import dva from 'dva';
 import './index.less';
 
@@ -19,6 +21,7 @@ const app = dva({
 
 // 2. Plugins
 // app.use();
+app.use(createLoading());
 
 // 3. Model
 // Moved to router.js
@@ -28,3 +31,5 @@ app.router(require('./router.jsx'));
 
 // 5. Start
 app.start('#root');
+
+export default app._store; // eslint-disable-line
