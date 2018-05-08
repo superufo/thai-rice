@@ -55,3 +55,7 @@ https://blog.csdn.net/nianhua120/article/details/77683807?locationNum=3&fps=1
 JSON.stringify() 方法是将一个JavaScript值(对象或者数组)转换为一个 JSON字符串
 
 npm install roadhog-api-doc -g  &&  npm install roadhog-api-doc -save    //https://www.npmjs.com/package/roadhog-api-doc
+
+dva  参考 
+https://github.com/dvajs/dva-knowledgemap#effects  https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/concepts.md#reducer  https://github.com/dvajs/dva-knowledgemap
+https://mobile.ant.design/components/tab-bar-cn/   https://ant.design/

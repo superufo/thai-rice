@@ -2,7 +2,7 @@ import { parse, stringify } from 'qs';
 import modelExtend from 'dva-model-extend';
 
 import { model } from './common';
-import { queryMenu } from '../services/api';
+import { queryMenu, queryAdv } from '../services/api';
 // import JsonUtils from '../utils/jsonUtils';
 
 export default modelExtend(model, {
@@ -17,7 +17,7 @@ export default modelExtend(model, {
       history.listen(({ pathname }) => {
         console.log(`pathname:${pathname}`);
         if (pathname === '/index' || pathname === '/') {
-          dispatch({ type: 'query', payload: {} });
+          dispatch({ type: 'query', payload: { userId:'1' } });
         }
       });
     },
@@ -39,27 +39,24 @@ export default modelExtend(model, {
         throw data;
       }
 
-      // const menuRes = state.menu;
-      // for (let k = 0, length = data.length; k < length; k++) {
-      //     menuRes.concat(data[k]);
-      // }
-
       yield put({
         type: 'updateState',
         payload: {
-          menu:data
+          menu: data,
         },
       });
 
-      //const advs = [{ id: '3' }, { id: '4' }];
       // const res = state.adv;
       // for (let k = 0, length = advs.length; k < length; k++) {
-      //   res.concat(advs[k]);
+      //   res.concat(advs[k]); const adv = state.adv.concat(advs);
       // }
+      const responseAdv = yield call(queryAdv, payload);
+      console.log('9999999999999999999');
+      console.log(responseAdv.data);
 
       yield put({
         type: 'updateAdvState',
-        payload: [{ id: '3' }, { id: '4' }]
+        payload: { adv : responseAdv.data },
       });
     },
   },
@@ -68,9 +65,8 @@ export default modelExtend(model, {
   reducers: {
     updateAdvState(state, { payload: advs }) {
       console.log('payload11111:');
-      // console.log(payload);
       console.log(advs);
-      const adv = state.adv.concat(advs);
+      const { adv } = advs;
       return { ...state, adv };
     },
   },

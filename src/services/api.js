@@ -2,13 +2,14 @@ import { stringify } from 'qs';
 import request from '../utils/request';
 
 export async function queryMenu() {
-  // console.log(`start queryMenu.....`);
-  //
-  // const  data = request('/api/getmenu');
-  // console.log(data);
-  return request('/api/getmenu');
+    return request('/api/getmenu');
 }
 
+export async function queryAdv(params) {
+    console.log("params:")
+    console.log(params)
+    return request('/api/getAdv', {method: 'GET', body: params});
+}
 
 // export async function addRule(params) {
 //   return request('/api/rule', {
