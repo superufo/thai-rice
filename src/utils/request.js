@@ -43,7 +43,7 @@ function checkStatus(response) {
  * @param  {object} [options] The options we want to pass to "fetch"
  * @return {object}           An object containing either "data" or "err"
  */
-export default function request(url, options) {  console.log(` request url: ${stringify(url) }`);
+export default function request(url, options) {  console.log('request url0000:'+url);
     const defaultOptions = {
         credentials: 'include',
     };
@@ -68,31 +68,37 @@ export default function request(url, options) {  console.log(` request url: ${st
     return fetch(url, newOptions)
         .then(checkStatus)
         .then(response => {
-            console.log(` request response: ${stringify(response) }`);
+            let res= response.json();
+            console.log(res);
+
             if (newOptions.method === 'DELETE' || response.status === 204) {
                 return response.text();
             }
-            return response.json();
+            return res;
         })
-        .catch(e => {
+        .catch( e => {
             const { dispatch } = store;
             const status = e.name;
-            if (status === 401) {
-                dispatch({
-                    type: 'login/logout',
-                });
-                return;
-            }
-            if (status === 403) {
-                dispatch(routerRedux.push('/exception/403'));
-                return;
-            }
-            if (status <= 504 && status >= 500) {
-                dispatch(routerRedux.push('/exception/500'));
-                return;
-            }
-            if (status >= 404 && status < 422) {
-                dispatch(routerRedux.push('/exception/404'));
-            }
+
+            // console.log(e);
+            // console.log(status);
+            // console.log('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy');
+            // if (status === 401) {
+            //     dispatch({
+            //         type: 'login/logout',
+            //     });
+            //     return;
+            // }
+            // if (status === 403) {
+            //     dispatch(routerRedux.push('/exception/403'));
+            //     return;
+            // }
+            // if (status <= 504 && status >= 500) {
+            //     dispatch(routerRedux.push('/exception/500'));
+            //     return;
+            // }
+            // if (status >= 404 && status < 422) {
+            //     dispatch(routerRedux.push('/exception/404'));
+            // }
         });
 }

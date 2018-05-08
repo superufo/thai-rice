@@ -2,10 +2,10 @@ import { stringify } from 'qs';
 import request from '../utils/request';
 
 export async function queryMenu() {
-  console.log(`start queryMenu.....`);
-
-  //const  data = request('/api/getmenu');
-  //console.log(` async function queryMenu: ${stringify(data) }`);
+  // console.log(`start queryMenu.....`);
+  //
+  // const  data = request('/api/getmenu');
+  // console.log(data);
   return request('/api/getmenu');
 }
 

@@ -7,10 +7,12 @@ import Footer from './footer.jsx';
 import styles from './main.less';
 
 function Main({
-  children, location
+  children, location, loading,
 }) {
+  console.log(`Main loading:${loading}`);
+
   return (
-    <div className={styles.normal}>
+    <div className={styles.normal} loading={loading} >
       <Header location={location} />
       <Footer location={location} childrens={children} />
     </div>
@@ -19,7 +21,7 @@ function Main({
 
 Main.propTypes = {
   children: PropTypes.element.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 };
 
 export default Main;

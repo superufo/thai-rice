@@ -1,3 +1,4 @@
+import { stringify } from 'qs';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'dva';
@@ -17,24 +18,33 @@ const Index =  ({
   // console.log("location11111:"+location);
   // console.log("dispatch:"+dispatch);
   // console.log("index:"+index);
-  // console.log("isLoading:"+loading);
+  console.log("loading:");
+  console.log("loading:"+loading);
+  console.log("loading.global:");
+  console.log(loading.global );
+  console.log("isLoading:" );
+  console.log(isLoading);
+  console.log("index:");
+  console.log(index);
 
   return (
-    <Main location={location}   loading={isLoading}>
-      <div className={styles.normal}>
-        <MenuCarousel />
-      </div>
-      <div className={styles.bodynormal}  >
-        <TopMenu />
-      </div>
-      <div className={styles.bodynormal}>
-        <h1 className={styles.title}>Yay! Welcome to dva!</h1>
-        <div className={styles.welcome} />
-        <ul className={styles.list}>
-          <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
-          <li><a href="https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md">Getting Started</a></li>
-        </ul>
-      </div>
+    <Main location={location} loading={isLoading.toString()}>
+         <div>
+              <div className={styles.normal}>
+                <MenuCarousel />
+              </div>
+              <div className={styles.bodynormal}  >
+                <TopMenu />
+              </div>
+              <div className={styles.bodynormal}>
+                <h1 className={styles.title}>Yay! Welcome to dva!</h1>
+                <div className={styles.welcome} />
+                <ul className={styles.list}>
+                  <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
+                  <li><a href="https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md">Getting Started</a></li>
+                </ul>
+              </div>
+         </div>
     </Main>
   );
 }

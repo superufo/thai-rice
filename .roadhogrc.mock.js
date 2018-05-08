@@ -1,5 +1,5 @@
 import mockjs from 'mockjs';
-import { getMenu } from '../mock/menu';
+import { getMenu } from './mock/menu';
 import { format, delay } from 'roadhog-api-doc';
 
 // 是否禁用代理
@@ -10,17 +10,17 @@ const proxy = {
     // 支持值为 Object 和 Array
     'GET /api/getmenu':(req, res) => {  console.log(`start 22222.....`);
         res.send({
-        'status': 'ok',
-        'msg': "成功",
-        'data': getMenu
+            status: 'ok',
+            msg: '成功',
+            data: getMenu
        });
     },
     'GET /api/getProduct': (req, res) => {
             const { id } = req.body;
             res.send({
-                'status': 'ok',
-                'msg': "成功",
-                'data': [{
+                status: 'ok',
+                msg: '成功',
+                data: [{
 
                     },{
 
@@ -32,9 +32,9 @@ const proxy = {
     'GET /api/getAdv': (req, res) => {
         const { id } = req.body;
         res.send({
-            'status': 'ok',
-            'msg': "成功",
-            'data': [
+            status: 'ok',
+            msg: '成功',
+            data: [
                     {
                         'id':'1',
                         'imagin':Random.dataImage('345x184', '广告1'),
