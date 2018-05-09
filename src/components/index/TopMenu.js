@@ -1,5 +1,5 @@
-import { Tabs, WhiteSpace,WingBlank } from 'antd-mobile';
-import { PubSub } from 'pubsub-js';
+import { Tabs, WhiteSpace,WingBlank,Drawer } from 'antd-mobile';
+import  PubSub  from 'pubsub-js';
 
 import ChdMenu from './ChdMenu';
 import StringUtils from '../../utils/stringUtils';
@@ -11,6 +11,7 @@ class TopMenu extends React.Component {
 
     state = {
         tabs: [],
+        menuId:''
     }
 
     componentWillReceiveProps(tabs) {
@@ -19,28 +20,35 @@ class TopMenu extends React.Component {
         });
     }
 
+    getProduct(menuId){
+        console.log("menuId");
+        console.log(menuId);
+        this.setState({
+            menuId: menuId
+        });
+        PubSub.publish('PubSubProId',this.state.menuId);
+    }
+
     renderContent = tab => {
         if ( StringUtils.isEmpty(tab.cmenu) )
         {
             console.log(tab.cmenu);
             return  (<div style={{
                 display: 'flex',
-                alignItems: 'center',
+                alignItems: 'top',
                 justifyContent: 'center',
-                height: '150px',
+                height: '320px',
                 backgroundColor: '#fff'
             }}>
                 <p>Content of {tab.title}</p>
             </div>);
         } else {
             console.log(111111111);
-            //console.log(this.prop.tabs);
-            //console.log(tab);
             return (<div style={{
                 display: 'flex',
-                alignItems: 'center',
+                alignItems: 'top',
                 justifyContent: 'center',
-                height: '250px',
+                height: '320px',
                 backgroundColor: '#fff'
             }}>
                 <ChdMenu content={tab} />
@@ -53,7 +61,7 @@ class TopMenu extends React.Component {
         return (
             <div>
                 <WingBlank />
-                <Tabs tabs={this.state.tabs} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
+                <Tabs tabs={this.state.tabs} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />} onTabClick={this.getProduct.bind(this,2)}>
                     {this.renderContent}
                 </Tabs>
                 <WingBlank />

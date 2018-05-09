@@ -15,8 +15,6 @@ import PubSub from 'pubsub-js'
 PS:pubsubjs源npm install eslint-config-airbnb --save
 码及使用详情https://github.com/mroderick/PubSubJS
 
-
-
 npm install -g eslint
 npm install  babel-eslint --save
 npm install eslint-config-airbnb  --save
@@ -59,3 +57,5 @@ npm install roadhog-api-doc -g  &&  npm install roadhog-api-doc -save    //https
 dva  参考 
 https://github.com/dvajs/dva-knowledgemap#effects  https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/concepts.md#reducer  https://github.com/dvajs/dva-knowledgemap
 https://mobile.ant.design/components/tab-bar-cn/   https://ant.design/
+
+初始赋值: React提供了一个dangerouslySetInnerHTML属性，可以实现inner赋值操作 无法通过id或class  。 
