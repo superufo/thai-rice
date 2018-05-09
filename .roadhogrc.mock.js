@@ -23,17 +23,17 @@ const proxy = {
             msg: '成功',
             data: [
                 {
-                    'id': '1',
-                    'imagin': Random.image('345x184','#fb0a2a', '广告1'),
-                    'src': "http://www.google.com"
+                    id: '1',
+                    imagin: Random.image('345x184','#fb0a2a', '广告1'),
+                    src: "http://www.google.com"
                 }, {
-                    'id': '2',
-                    'imagin': Random.image('345x184', '#00405d', '#FFF', '广告2'),
-                    'src': "http://www.baidu.com"
+                    id: '2',
+                    imagin: Random.image('345x184', '#00405d', '#FFF', '广告2'),
+                    src: "http://www.baidu.com"
                 }, {
-                    'id': '3',
-                    'imagin': Random.image('345x184', '#ffcc33','#FFF', 'png', '广告3'),
-                    'src': Random.url()
+                    id: '3',
+                    imagin: Random.image('345x184', '#ffcc33','#FFF', 'png', '广告3'),
+                    src: Random.url()
                 }
             ]
         });

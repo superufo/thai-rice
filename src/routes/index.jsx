@@ -12,7 +12,7 @@ import TopMenu from '../components/index/TopMenu';
 const Index =  ({
    dispatch,location,index,loading
 }) => {
-  //
+  const {menu,adv}= index;
   const isLoading = loading.effects['index/query'];
 
   // console.log("location11111:"+location);
@@ -26,23 +26,17 @@ const Index =  ({
   console.log(isLoading);
   console.log("index:");
   console.log(index);
+  console.log("index:state:adv");
+  console.log(adv);
 
   return (
     <Main location={location} loading={isLoading.toString()}>
          <div>
               <div className={styles.normal}>
-                <MenuCarousel />
+                <MenuCarousel advData={adv}  />
               </div>
               <div className={styles.bodynormal}  >
-                <TopMenu />
-              </div>
-              <div className={styles.bodynormal}>
-                <h1 className={styles.title}>Yay! Welcome to dva!</h1>
-                <div className={styles.welcome} />
-                <ul className={styles.list}>
-                  <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
-                  <li><a href="https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md">Getting Started</a></li>
-                </ul>
+                <TopMenu tabs={menu} />
               </div>
          </div>
     </Main>

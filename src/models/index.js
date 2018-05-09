@@ -9,7 +9,7 @@ export default modelExtend(model, {
   namespace: 'index',
   state: {
     menu: [],
-    adv: [{ id: '1' }, { id: '2' }],
+    adv: [],
   },
 
   subscriptions: {
