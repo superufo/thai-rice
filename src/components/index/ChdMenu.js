@@ -29,7 +29,7 @@ class ChdMenu extends React.Component {
 
                                             extra={
                                                 <Stepper
-                                                    style={{width:'100%',fontSize:'8px',marginLeft:'0px', marginRight:'100px',paddingRight:'-5px'}}
+                                                    style={{width:'100%',fontSize:'8px',marginLeft:'0px', marginRight:'80px',paddingRight:'-90px'}}
                                                     showNumber
                                                     max={1000}
                                                     min={0}
@@ -39,7 +39,7 @@ class ChdMenu extends React.Component {
                                             multipleLine
                                         >
                                             <div style={{display:'inline-block',verticalAlign:'middle',}}><img src={eachitem.imagin} style={{height:'80px',width:'80px',marginRight:'5px'}}/> </div>
-                                            <div style={{display:'inline-block',verticalAlign:'middle',}}>
+                                            <div style={{display:'inline-block',verticalAlign:'middle',marginRight:'-25px'}}>
                                                 <p style={{fontSize:'12px'}}>{eachitem.title}</p>
                                                 <Item.Brief style={{fontSize:'8px'}} >{eachitem.price}</Item.Brief>
                                                 <Item.Brief style={{fontSize:'8px'}}>{eachitem.desc}</Item.Brief>

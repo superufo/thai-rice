@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a48e32-ab21-4997-aaa8-c2f12945de62" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mock/menu.js" afterPath="$PROJECT_DIR$/mock/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/index/ChdMenu.js" afterPath="$PROJECT_DIR$/src/components/index/ChdMenu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/index/TopMenu.js" afterPath="$PROJECT_DIR$/src/components/index/TopMenu.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,8 +51,8 @@
       <file leaf-file-name="ChdMenu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/index/ChdMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="58" column="33" lean-forward="false" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+            <state relative-caret-position="454">
+              <caret line="41" column="118" lean-forward="false" selection-start-line="41" selection-start-column="118" selection-end-line="41" selection-end-column="118" />
               <folding />
             </state>
           </provider>
@@ -334,12 +332,12 @@
       <updated>1524898776571</updated>
       <workItem from="1524898781488" duration="894000" />
       <workItem from="1524899693778" duration="16021000" />
-      <workItem from="1525007874230" duration="133538000" />
+      <workItem from="1525007874230" duration="134047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150453000" />
+    <option name="totallyTimeSpent" value="150962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -855,8 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/index/ChdMenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="58" column="33" lean-forward="false" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+        <state relative-caret-position="454">
+          <caret line="41" column="118" lean-forward="false" selection-start-line="41" selection-start-column="118" selection-end-line="41" selection-end-column="118" />
           <folding />
         </state>
       </provider>
