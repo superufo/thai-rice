@@ -122,7 +122,30 @@ const getMenu = [
                     }
                 ]
             },
-            {title: '咖啡', id: '13'},
+            {
+                title: '咖啡',
+                id: '13',
+                products:[
+                    {
+                        proId: '11',
+                        imagin: Random.image('150x150', '#ffcc33', '#FFF', 'png', '美式咖啡'),
+                        src: Random.url(),
+                        price: '10.00',
+                        title: '美式咖啡',
+                        desc: '美式咖啡',
+                        num:'0'
+                    },
+                    {
+                        proId: '12',
+                        imagin: Random.image('150x150', '#ffcc33', '#FFF', 'png', '卡布奇洛'),
+                        src: Random.url(),
+                        price: '60.00',
+                        title: '卡布奇洛',
+                        desc: '卡布奇洛',
+                        num:'0'
+                    }
+                ]
+            },
             {title: '茶', id: '14'}
         ],
     },

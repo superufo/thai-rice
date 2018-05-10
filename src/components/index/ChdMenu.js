@@ -7,34 +7,60 @@ class ChdMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            val: 3
+            val: 3,
+            cmenu:this.props.content.cmenu
         };
     }
 
-    onChange = (val) => {
-        // console.log(val);
-        this.setState({ val });
+
+    onChange = (val,xindex,tabIdx) => {
+        console.log(val);
+        console.log("tabIdx:");
+        console.log(tabIdx);
+        console.log("xindex:");
+        console.log(xindex);
+
+        //this.setState({ this.state.cmenu[tabIdx].products[index].num });
     }
 
     renderContent = tab => {
+            console.log("tab");
+            console.log(tab);
             console.log(tab.products);
+            console.log("tab.activeTab");
+            console.log(tab.activeTab);
+            console.log("tab.page");
+            console.log(tab.page);
 
             const { products } = tab;
+
+            if( products===undefined ||    products===null ){
+                return '無產品';
+            }
+
+            var tabIdx = -1;
+            var length = this.state.cmenu.length;
+            for (let k = 0; k < length; k++){
+                    if( this.state.cmenu[k].id === tab.id  ){
+                        tabIdx=k;
+                        break;
+                    }
+            }
 
             return  (
                     <List  style={{width: '100%',fontSize:'8px'}}>
                         {
                             products.map((eachitem, index) => { console.log("eachitem"); console.log(eachitem);  console.log("index"); console.log(index);
                                     return  (<Item
-
+                                            key={eachitem.proId}
                                             extra={
                                                 <Stepper
                                                     style={{width:'100%',fontSize:'8px',marginLeft:'0px', marginRight:'80px',paddingRight:'-90px'}}
                                                     showNumber
                                                     max={1000}
                                                     min={0}
-                                                    value={this.state.val}
-                                                    onChange={this.onChange}
+                                                    value={this.state.cmenu[tabIdx].products[index].num}
+                                                    onChange={this.onChange.bind(this,index,tabIdx)}
                                                 />}
                                             multipleLine
                                         >
@@ -54,14 +80,19 @@ class ChdMenu extends React.Component {
 
     render() {
         var tabs = this.props.content.cmenu;
+        //this.state.products = tabs.cmenu;
+        console.log("this.state.products:");
+        console.log(this.state.cmenu);
+        console.log(this.state.cmenu[1].products);
 
         return (<div style={{height: 320}}>
                 <Tabs tabs={tabs}
+                      key={tabs.id}
                       style={{width: '10%',fontSize:'8px'}}
                       initalPage={'t2'}
                       tabBarPosition="left"
                       tabDirection="vertical"
-                      renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3}  style={{width: '100%',fontSize:'8px'}} />}
+                      renderTabBar={props => <Tabs.DefaultTabBar {...props} page={tabs.id} style={{width: '100%',fontSize:'8px'}} />}
                 >
                     {this.renderContent}
                 </Tabs>
