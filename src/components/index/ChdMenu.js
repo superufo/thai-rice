@@ -13,28 +13,28 @@ class ChdMenu extends React.Component {
     }
 
 
-    onChange = (val,xindex,tabIdx) => {
-        console.log(val);
-        console.log("tabIdx:");
-        console.log(tabIdx);
-        console.log("xindex:");
-        console.log(xindex);
+    onChange = (tIdx,xindex,val) => {
+        // console.log("tIdx:");
+        // console.log(tIdx);
+        // console.log("xindex:");
+        // console.log(xindex);
+        // console.log("this.state.cmenu[tIdx].products[xindex].num:");
+        // console.log(this.state.cmenu[tIdx].products[xindex].num);
+        // console.log(val);
 
        var tmp =  this.props.content.cmenu;
-       tmp[tabIdx].products[xindex].num = val;
-
-        //cmenu[index].products[tabIdx].num = val;
-        this.setState({ cmenu:tmp });
+       tmp[tIdx].products[xindex].num = val;
+       this.setState({ cmenu:tmp });
     }
 
     renderContent = tab => {
-            console.log("tab");
-            console.log(tab);
-            console.log(tab.products);
-            console.log("tab.activeTab");
-            console.log(tab.activeTab);
-            console.log("tab.page");
-            console.log(tab.page);
+            // console.log("tab");
+            // console.log(tab);
+            // console.log(tab.products);
+            // console.log("tab.activeTab");
+            // console.log(tab.activeTab);
+            // console.log("tab.page");
+            // console.log(tab.page);
 
             const { products } = tab;
 
@@ -64,7 +64,7 @@ class ChdMenu extends React.Component {
                                                     max={1000}
                                                     min={0}
                                                     value={this.state.cmenu[tabIdx].products[index].num}
-                                                    onChange={this.onChange.bind(this,index,tabIdx)}
+                                                    onChange={this.onChange.bind(this,tabIdx,index)}
                                                 />}
                                             multipleLine
                                         >
@@ -84,10 +84,9 @@ class ChdMenu extends React.Component {
 
     render() {
         var tabs = this.props.content.cmenu;
-        //this.state.products = tabs.cmenu;
-        console.log("this.state.products:");
-        console.log(this.state.cmenu);
-        console.log(this.state.cmenu[1].products);
+        // console.log("this.state.products:");
+        // console.log(this.state.cmenu);
+        // console.log(this.state.cmenu[1].products);
 
         return (<div style={{height: 320}}>
                 <Tabs tabs={tabs}

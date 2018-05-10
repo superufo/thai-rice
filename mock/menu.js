@@ -58,7 +58,7 @@ const getMenu = [
                         price: '20.00',
                         title: '热饮料4',
                         desc: 'desc',
-                        num:'0'
+                        num:'4'
                     },
                     {
                         proId: '5',
