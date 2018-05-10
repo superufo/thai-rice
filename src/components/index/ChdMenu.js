@@ -20,7 +20,11 @@ class ChdMenu extends React.Component {
         console.log("xindex:");
         console.log(xindex);
 
-        //this.setState({ this.state.cmenu[tabIdx].products[index].num });
+       var tmp =  this.props.content.cmenu;
+       tmp[tabIdx].products[xindex].num = val;
+
+        //cmenu[index].products[tabIdx].num = val;
+        this.setState({ cmenu:tmp });
     }
 
     renderContent = tab => {
