@@ -14,20 +14,16 @@ const Index =  ({
 }) => {
   const {menu,adv}= index;
   const isLoading = loading.effects['index/query'];
-
-  // console.log("location11111:"+location);
-  // console.log("dispatch:"+dispatch);
-  // console.log("index:"+index);
-  console.log("loading:");
-  console.log("loading:"+loading);
-  console.log("loading.global:");
-  console.log(loading.global );
-  console.log("isLoading:" );
-  console.log(isLoading);
-  console.log("index:");
-  console.log(index);
-  console.log("index:state:adv");
-  console.log(adv);
+  // console.log("loading:");
+  // console.log("loading:"+loading);
+  // console.log("loading.global:");
+  // console.log(loading.global );
+  // console.log("isLoading:" );
+  // console.log(isLoading);
+  // console.log("index:");
+  // console.log(index);
+  // console.log("index:state:adv");
+  // console.log(adv);
 
   return (
     <Main location={location} loading={isLoading.toString()}>

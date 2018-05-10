@@ -26,15 +26,15 @@ export default modelExtend(model, {
   effects: {
     *query({ payload }, { call, put }) {
       const response = yield call(queryMenu, payload);
-      console.log('8888888888888888888888888888');
-      console.log(response);
+      // console.log('8888888888888888888888888888');
+      // console.log(response);
       const {
         status, msg, data,
       } = response;
 
-      console.log(`query msg:${msg}`);
-      console.log(`query status:${status}`);
-      console.log(`query data:${data}`);
+      // console.log(`query msg:${msg}`);
+      // console.log(`query status:${status}`);
+      // console.log(`query data:${data}`);
       if (status != 'ok') {
         throw data;
       }
@@ -51,8 +51,8 @@ export default modelExtend(model, {
       //   res.concat(advs[k]); const adv = state.adv.concat(advs);
       // }
       const responseAdv = yield call(queryAdv, payload);
-      console.log('9999999999999999999');
-      console.log(responseAdv.data);
+      // console.log('9999999999999999999');
+      // console.log(responseAdv.data);
 
       yield put({
         type: 'updateAdvState',
@@ -64,8 +64,8 @@ export default modelExtend(model, {
   // 放到公用函數裏面
   reducers: {
     updateAdvState(state, { payload: advs }) {
-      console.log('payload11111:');
-      console.log(advs);
+      // console.log('payload11111:');
+      // console.log(advs);
       const { adv } = advs;
       return { ...state, adv };
     },

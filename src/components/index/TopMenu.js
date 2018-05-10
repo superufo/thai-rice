@@ -21,8 +21,6 @@ class TopMenu extends React.Component {
     }
 
     getProduct(menuId){
-        console.log("menuId");
-        console.log(menuId);
         this.setState({
             menuId: menuId
         });
@@ -43,7 +41,6 @@ class TopMenu extends React.Component {
                 <p>Content of {tab.title}</p>
             </div>);
         } else {
-            console.log(111111111);
             return (<div style={{
                 display: 'flex',
                 alignItems: 'top',
