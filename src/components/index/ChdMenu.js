@@ -54,7 +54,7 @@ class ChdMenu extends React.Component {
             return  (
                     <List  style={{width: '100%',fontSize:'8px'}}>
                         {
-                            products.map((eachitem, index) => { console.log("eachitem"); console.log(eachitem);  console.log("index"); console.log(index);
+                            products.map((eachitem, index) => {   //console.log("eachitem"); console.log(eachitem);  console.log("index"); console.log(index);
                                     return  (<Item
                                             key={eachitem.proId}
                                             extra={
