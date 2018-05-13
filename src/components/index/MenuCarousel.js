@@ -2,7 +2,7 @@ import { Carousel, WingBlank,WhiteSpace } from 'antd-mobile';
 
 class MenuCarousel extends React.Component {
     state = {
-        data: ['1', '2', '3'],
+        data: '' ,
         imgHeight: 176,
     }
 
@@ -22,9 +22,13 @@ class MenuCarousel extends React.Component {
     }
 
     render() {
+        if( !this.state.data ){
+            return '';
+        }
+
         return (
-            <WingBlank>
                     <Carousel
+                        key='1'
                         autoplay={true}
                         infinite
                         //beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
@@ -38,6 +42,7 @@ class MenuCarousel extends React.Component {
                                 style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
                             >
                                 <img
+
                                     src={item.imagin}
                                     alt=""
                                     style={{ width: '100%', verticalAlign: 'top' }}
@@ -51,8 +56,8 @@ class MenuCarousel extends React.Component {
                         ))
                     }
                 </Carousel>
-            </WingBlank>
         );
+
     }
 }
 

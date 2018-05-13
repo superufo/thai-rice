@@ -33,6 +33,7 @@ react-redux  connect      connect(mapStateToProps, mapDispatchToProps, mergeProp
 dva          connect      export default connect(从 model 的 state 中获取数据)(要将数据绑定到哪个组件)
 
 withRouter 函数，页面进行路由跳转时触发该函数
+withRouter可以包装任何自定义组件，将react-router 的 history,location,match 三个对象传入
 props.match 对于知道详情页面渲染的 userId 以及如何编写我们的路由是很有用的。match 对象给我们提供了几个属性，包括 match.params、match.path、match.url
 this.props.children属性就是子组件。
 
@@ -45,7 +46,6 @@ this.props.children属性就是子组件。
   body: JSON.stringify(values),
 });`
 这时程序就会向http://localhost:8011/users发送post请求。
-
 
 dva的roadhogrc配置文件webstorm或idea解析
 https://blog.csdn.net/nianhua120/article/details/77683807?locationNum=3&fps=1
@@ -60,5 +60,5 @@ https://mobile.ant.design/components/tab-bar-cn/   https://ant.design/
 
 初始赋值: React提供了一个dangerouslySetInnerHTML属性，可以实现inner赋值操作 无法通过id或class  。 
 
-svg 矢量图形：https://www.w3cplus.com/svg/svg-intro.html
+svg 矢量图形：https://www.w3cplus.com/svg/svg-intro.html          插件:https://github.com/tanem/react-svg    https://blog.csdn.net/AboyL/article/details/79776563 
 todo: 要重新 制作tabs矢量图  地址： http://iconfont.cn/ 账号github    

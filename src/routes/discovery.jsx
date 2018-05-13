@@ -1,31 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  connect
-} from 'dva';
-
+import { connect } from 'dva';
 import styles from './discovery.less';
 
-import Main from '../layouts/main.jsx';
+const Discovery = ({
+  dispatch, location, discovery, loading,
+}) => {
+  //console.log("index:discovery");console.log(discovery);
+  const { headerInfo } = discovery;
+  const isLoading = loading.effects['discovery/query'];
 
-function Page01({
-  location
-}) {
   return (
-    <Main location={location}>
       <div className={styles.normal}>
-        Route Component: Page01
+            Route Component: discovery
       </div>
-    </Main>
   );
-}
-
-Page01.propTypes = {
-  location: PropTypes.object.isRequired
 };
 
-function mapStateToProps() {
-  return {};
-}
+Discovery.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
-export default connect(mapStateToProps)(Page01);
+export default connect(({ discovery, loading  }) => ({ discovery, loading  }))(Discovery);

@@ -1,5 +1,4 @@
 //import cookie from 'react-cookie';
-
 import { message } from 'antd';
 import dva from 'dva';
 import './index.less';
@@ -21,10 +20,11 @@ const app = dva({
 
 // 2. Plugins
 // app.use();
-app.use(createLoading());
+//app.use(createLoading());
 
 // 3. Model
 // Moved to router.js
+app.model(require('./models/app'))
 
 // 4. Router
 app.router(require('./router.jsx'));

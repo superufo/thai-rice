@@ -1,19 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  TabBar
-} from 'antd-mobile';
-import {
-  connect
-} from 'dva';
-import {
-  routerRedux
-} from 'dva/router';
+import {TabBar} from 'antd-mobile';
+import {connect} from 'dva';
+import {routerRedux} from 'dva/router';
 
 import styles from './footer.less';
 
 function Footer({
-  dispatch, childrens, location
+          childrens,dispatch,location
 }) {
   return (
     <div className={styles.normal}>
@@ -43,7 +37,7 @@ function Footer({
           selected={location.pathname === '/'}
           badge={1}
           onPress={() => dispatch(routerRedux.push('/'))}
-          data-seed="shenghuo"
+          data-seed="shouye"
         >
           {childrens}
         </TabBar.Item>

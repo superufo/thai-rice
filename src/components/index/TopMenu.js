@@ -30,7 +30,6 @@ class TopMenu extends React.Component {
     renderContent = tab => {
         if ( StringUtils.isEmpty(tab.cmenu) )
         {
-            console.log(tab.cmenu);
             return  (<div style={{
                 display: 'flex',
                 alignItems: 'top',

@@ -1,15 +1,16 @@
-import { parse, stringify } from 'qs';
 import modelExtend from 'dva-model-extend';
 
 import { model } from './common';
-import { queryMenu, queryAdv } from '../services/api';
-// import JsonUtils from '../utils/jsonUtils';
+import { queryMenu, queryAdv, queryShopInfo } from '../services/api';
 
 export default modelExtend(model, {
   namespace: 'index',
   state: {
     menu: [],
     adv: [],
+    headerInfo: {
+      shopId: '', shopName: '', logo: '', desc: '', owner: '', country: '', city: '', address: '', telephone: '', mobile: '',
+    },
   },
 
   subscriptions: {
@@ -17,7 +18,7 @@ export default modelExtend(model, {
       history.listen(({ pathname }) => {
         console.log(`pathname:${pathname}`);
         if (pathname === '/index' || pathname === '/') {
-          dispatch({ type: 'query', payload: { userId:'1' } });
+          dispatch({ type: 'query', payload: { shopId: '1' } });
         }
       });
     },
@@ -26,15 +27,10 @@ export default modelExtend(model, {
   effects: {
     *query({ payload }, { call, put }) {
       const response = yield call(queryMenu, payload);
-      // console.log('8888888888888888888888888888');
-      // console.log(response);
       const {
         status, msg, data,
       } = response;
 
-      // console.log(`query msg:${msg}`);
-      // console.log(`query status:${status}`);
-      // console.log(`query data:${data}`);
       if (status != 'ok') {
         throw data;
       }
@@ -46,28 +42,44 @@ export default modelExtend(model, {
         },
       });
 
+
+      const shopInfoResponse = yield call(queryShopInfo, payload);
+      console.log('shopInfoResponse.data');
+      console.log(shopInfoResponse.data);
+
+      if (shopInfoResponse.status != 'ok') {
+        throw shopInfoResponse.data;
+      }
+
+      yield put({
+        type: 'updateShopState',
+        payload: {
+          headerInfo: shopInfoResponse.data,
+        },
+      });
+
       // const res = state.adv;
       // for (let k = 0, length = advs.length; k < length; k++) {
       //   res.concat(advs[k]); const adv = state.adv.concat(advs);
       // }
       const responseAdv = yield call(queryAdv, payload);
-      // console.log('9999999999999999999');
-      // console.log(responseAdv.data);
 
       yield put({
         type: 'updateAdvState',
-        payload: { adv : responseAdv.data },
+        payload: { adv: responseAdv.data },
       });
     },
   },
 
-  // 放到公用函數裏面
   reducers: {
     updateAdvState(state, { payload: advs }) {
-      // console.log('payload11111:');
-      // console.log(advs);
       const { adv } = advs;
       return { ...state, adv };
+    },
+
+    updateShopState(state, { payload: headerInfoSet }) {
+      const {headerInfo} = headerInfoSet;
+      return { ...state, headerInfo };
     },
   },
 });

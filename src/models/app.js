@@ -3,7 +3,7 @@ import { model } from './common';
 import { queryShopInfo } from '../services/api';
 
 export default modelExtend(model, {
-  namespace: 'discovery',
+  namespace: 'app',
 
   state: {
     headerInfo: {
@@ -12,14 +12,15 @@ export default modelExtend(model, {
   },
 
   subscriptions: {
-    setup({ dispatch, history }) {
-      history.listen(({ pathname }) => {
-        console.log(` discovery pathname:${pathname}`);
-        if (pathname === '/discovery') {
-          dispatch({ type: 'query', payload: { shopId: '1' } });
-        }
-      });
-    },
+      setup({dispatch, history}) {
+              dispatch({type: 'query', payload: {shopId: '1'}});
+      },
+
+      // setupHistory ({ dispatch, history }) {
+      //     history.listen((location) => {
+      //         dispatch({type: 'query', payload: {shopId: '1'}});
+      //     })
+      // },
   },
 
   effects: {

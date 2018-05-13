@@ -3,20 +3,16 @@ import PropTypes from 'prop-types';
 import {
   connect
 } from 'dva';
-
 import styles from './my.less';
 
-import Main from '../layouts/main.jsx';
 
 function Page03({
   location
 }) {
   return (
-    <Main location={location}>
       <div className={styles.normal}>
         Route Component: Page03
       </div>
-    </Main>
   );
 }
 

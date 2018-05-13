@@ -11,6 +11,11 @@ const model = {
         ...payload,
       };
     },
+
+    updateShopState(state, { payload: headerInfoSet }) {
+          const {headerInfo} = headerInfoSet;
+          return { ...state, headerInfo };
+    },
   },
 };
 

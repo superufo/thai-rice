@@ -10,7 +10,7 @@ const noProxy = process.env.NO_PROXY === 'true';
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 const proxy = {
     // 支持值为 Object 和 Array
-    'GET /api/getmenu':(req, res) => {  console.log(`start 22222.....`);
+    'GET /api/getmenu':(req, res) => {
         res.send({
             status: 'ok',
             msg: '成功',
@@ -38,18 +38,25 @@ const proxy = {
             ]
         });
      },
-    'GET /api/getProduct': (req, res) => {
-        const { userId } = req.body;
+    'GET /api/getShopInfo': (req, res) => {
+        const { shopId } = req.body;
+        console.log(`GET /api/getShopInfo.....`);
         res.send({
             status: 'ok',
             msg: '成功',
-            data: [{
-
-            },{
-
-            },{
-
-            }]
+            data: {
+                shopId: '1',
+                shopName: '大众餐馆',
+                logo: '../../assets/shop001.jpg',
+                desc: '大众餐馆,大众口味',
+                owner: 'wangxiaol',
+                country: '',
+                region: Random.region(),
+                city: Random.city(),
+                address: '',
+                telephone: '',
+                mobile: '',
+              }
         });
     },
 };
