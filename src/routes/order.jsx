@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'dva';
 import styles from './order.less';
+import {Cart} from '../components/order/Cart';
 
-function Page02({
+function Order({
   location
 }) {
   return (
       <div className={styles.normal}>
-        Route Component: Page02
+        <Cart />
       </div>
   );
 }
@@ -21,4 +22,4 @@ function mapStateToProps() {
   return {};
 }
 
-export default connect(mapStateToProps)(Page02);
+export default connect(mapStateToProps)(Order);

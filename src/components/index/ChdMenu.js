@@ -1,4 +1,5 @@
 import { Tabs, WhiteSpace,List, Stepper } from 'antd-mobile';
+import PubSub from 'pubsub-js';
 
 const Item = List.Item;
 
@@ -8,10 +9,13 @@ class ChdMenu extends React.Component {
         super(props);
         this.state = {
             val: 3,
-            cmenu:this.props.content.cmenu
+            cmenu:this.props.content.cmenu,
         };
     }
 
+    componentWillUnmount(){
+
+    }
 
     onChange = (tIdx,xindex,val) => {
         // console.log("tIdx:");
@@ -25,6 +29,8 @@ class ChdMenu extends React.Component {
        var tmp =  this.props.content.cmenu;
        tmp[tIdx].products[xindex].num = val;
        this.setState({ cmenu:tmp });
+
+       PubSub.publish('PubSubCmenu',this.state.cmenu);
     }
 
     renderContent = tab => {
