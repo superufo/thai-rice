@@ -73,7 +73,7 @@ todo: 要重新 制作tabs矢量图  地址： http://iconfont.cn/ 账号github
 
 7、React
 React.createElement(component, props, ...children); 
-如：var element = React.createElement("h1",null,"Hello, world!") ====  const element =  <h1>Hello, world!</h1>;
+如：var element = React.createElement("h6",null,"Hello, world!") ====  const element = <h6>Hello, world!</h6>;
 
 JSON.stringify() 方法是将一个JavaScript值(对象或者数组)转换为一个 JSON字符串
 
