@@ -62,3 +62,5 @@ https://mobile.ant.design/components/tab-bar-cn/   https://ant.design/
 
 svg 矢量图形：https://www.w3cplus.com/svg/svg-intro.html          插件:https://github.com/tanem/react-svg    https://blog.csdn.net/AboyL/article/details/79776563 
 todo: 要重新 制作tabs矢量图  地址： http://iconfont.cn/ 账号github    
+
+React.createElement(component, props, ...children); 如：var element = React.createElement("h1",null,"Hello, world!") ====  const element =  <h1>Hello, world!</h1>;

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a48e32-ab21-4997-aaa8-c2f12945de62" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/discovery/af.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/discovery/Article.js" afterPath="$PROJECT_DIR$/src/components/discovery/Article.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/discovery.jsx" afterPath="$PROJECT_DIR$/src/routes/discovery.jsx" />
     </list>
@@ -67,25 +66,38 @@
       <file leaf-file-name="discovery.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/discovery.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="72" lean-forward="false" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="72" />
+            <state relative-caret-position="493">
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1526297541124" expanded="true" signature="645:1420" ph="&lt;Main/&gt;" />
+                <marker date="1526301196741" expanded="true" signature="645:1325" ph="&lt;Main/&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Article.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Article.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/discovery/Article.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="92" lean-forward="false" selection-start-line="15" selection-start-column="92" selection-end-line="15" selection-end-column="92" />
+            <state relative-caret-position="527">
+              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
               <folding>
-                <element signature="e#0#67#0" expanded="true" />
-                <marker date="1526300257058" expanded="true" signature="500:980" ph="&lt;div/&gt;" />
+                <element signature="e#0#73#0" expanded="true" />
+                <marker date="1526301486388" expanded="true" signature="518:2313" ph="&lt;div/&gt;" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="765">
+                <caret line="65" column="54" lean-forward="false" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -103,7 +115,7 @@
       <file leaf-file-name="Feedback.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/discovery/Feedback.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="408">
               <caret line="60" column="128" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="128" />
               <folding>
                 <element signature="e#0#93#0" expanded="true" />
@@ -213,7 +225,6 @@
         <option value="$PROJECT_DIR$/src/layouts/headerT.jsx" />
         <option value="$PROJECT_DIR$/src/routes/App.jsx" />
         <option value="$PROJECT_DIR$/src/layouts/main.jsx" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/layouts/footer.jsx" />
         <option value="$PROJECT_DIR$/package-lock.json" />
@@ -240,6 +251,7 @@
         <option value="$PROJECT_DIR$/src/components/discovery/af.less" />
         <option value="$PROJECT_DIR$/src/routes/discovery.jsx" />
         <option value="$PROJECT_DIR$/src/components/discovery/Article.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -419,12 +431,12 @@
       <workItem from="1524898781488" duration="894000" />
       <workItem from="1524899693778" duration="16021000" />
       <workItem from="1525007874230" duration="134390000" />
-      <workItem from="1525925103771" duration="130570000" />
+      <workItem from="1525925103771" duration="132114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281875000" />
+    <option name="totallyTimeSpent" value="283419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -679,17 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="510">
-            <caret line="35" column="67" lean-forward="false" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/layouts/main.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -930,17 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/discovery/Feedback.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="60" column="128" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="128" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-            <marker date="1526295720091" expanded="true" signature="228:3988" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -957,17 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/discovery.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="72" lean-forward="false" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1526297541124" expanded="true" signature="645:1420" ph="&lt;Main/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/discovery/af.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -976,14 +955,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/discovery/Feedback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="60" column="128" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="128" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+            <marker date="1526295720091" expanded="true" signature="228:3988" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/discovery.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1526301196741" expanded="true" signature="645:1325" ph="&lt;Main/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/discovery/Article.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="92" lean-forward="false" selection-start-line="15" selection-start-column="92" selection-end-line="15" selection-end-column="92" />
+        <state relative-caret-position="527">
+          <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
           <folding>
-            <element signature="e#0#67#0" expanded="true" />
-            <marker date="1526300257058" expanded="true" signature="500:980" ph="&lt;div/&gt;" />
+            <element signature="e#0#73#0" expanded="true" />
+            <marker date="1526301486388" expanded="true" signature="518:2313" ph="&lt;div/&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="765">
+            <caret line="65" column="54" lean-forward="false" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

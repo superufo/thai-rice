@@ -23,10 +23,10 @@ const Discovery = ({
       <div className={styles.normal} style={{ fontFamily: 'Georgia, sans-serif', textAlign: 'center', paddingTop:'35px',marginTop:'45px',}} >
           <Tabs tabs={tabs}
                 initialPage={1}
-                onChange={(tab, index) => { console.log('onChange', index, tab); }}
-                onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
+                onChange={(tab, index) => {} }
+                onTabClick={(tab, index) => {}}
           >
-              <div style={{ display: 'flex', width:'100%',height: '100%', backgroundColor: '#fff' }}>
+              <div style={{width:'100%',height: '100%', backgroundColor: '#fff' }}>
                   <Article />
               </div>
               <div style={{ width:'100%',height: '100%', alignItems: 'left', justifyContent: 'left',backgroundColor: '#fff' }}>
