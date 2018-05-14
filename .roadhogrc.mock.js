@@ -1,5 +1,6 @@
 import  mockjs  from 'mockjs';
 import { getMenu } from './mock/menu';
+import { getNotice } from './mock/notice';
 import { format, delay } from 'roadhog-api-doc';
 
 const Random =  mockjs.Random;
@@ -9,6 +10,13 @@ const noProxy = process.env.NO_PROXY === 'true';
 
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 const proxy = {
+    'GET /api/getNotice':(req, res) => {
+        res.send({
+            status: 'ok',
+            msg: '成功',
+            data: getNotice
+        });
+    },
     // 支持值为 Object 和 Array
     'GET /api/getmenu':(req, res) => {
         res.send({

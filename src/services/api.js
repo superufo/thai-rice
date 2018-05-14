@@ -10,10 +10,13 @@ export async function queryAdv(params) {
 }
 
 export async function queryShopInfo(params) {
-    console.log("params:")
-    console.log(params)
     return request('/api/getShopInfo', {method: 'GET', body: params});
 }
+
+export async function queryNotice(params) {
+    return request('/api/getNotice', {method: 'GET', body: params});
+}
+
 
 
 // export async function addRule(params) {

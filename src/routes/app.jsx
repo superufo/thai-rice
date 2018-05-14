@@ -10,13 +10,13 @@ import { Loader } from '../components/Loader/Loader'
 const App = ({
     children, dispatch, app, loading, location,
 }) => {
-    const { headerInfo } = app;
+    const { headerInfo,notice } = app;
     // console.log("index:headerInfo");console.log(headerInfo);
     // console.log("children:");console.log(children);
 
     return (
         <div>
-            <Header location={location} headerInfo={headerInfo} />
+            <Header location={location} headerInfo={headerInfo} notice={notice}  />
             <Footer location={location} childrens={children}/>
         </div>
     );

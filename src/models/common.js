@@ -16,6 +16,11 @@ const model = {
           const {headerInfo} = headerInfoSet;
           return { ...state, headerInfo };
     },
+
+    updateNoticeState(state, { payload: noticeInfo }) {
+          const { notice }  = noticeInfo;
+          return { ...state, notice};
+    },
   },
 };
 

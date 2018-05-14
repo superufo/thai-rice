@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavBar, Icon, Menu, ActivityIndicator, } from 'antd-mobile';
+import { NavBar, Icon, Menu, ActivityIndicator,NoticeBar } from 'antd-mobile';
 
 import styles from './header.less';
 
@@ -62,6 +62,13 @@ class  Header  extends  React.Component  {
     render() {
         const { initData, show } = this.state;
 
+        let noticeControl = '';
+        if(  this.props.notice.content!="" ){
+             noticeControl = (<NoticeBar mode="link" onClick={() => alert('1')}>`{this.props.notice.title}:${this.props.notice.content}`</NoticeBar>);
+        }
+        console.log("noticeControl：");
+        console.log(noticeControl);
+
         const menuEl = (
             <Menu
                 className={styles.singleFooMenu}
@@ -104,6 +111,8 @@ class  Header  extends  React.Component  {
                         </div>
                     </NavBar>
                 </div>
+
+                {noticeControl}
 
                 {show ? initData ? menuEl : loadingEl : '' }
                 {show ? <div className={styles.menuMask}  onClick={this.onMaskClick} /> : ''}
