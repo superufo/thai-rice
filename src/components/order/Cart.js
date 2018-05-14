@@ -30,7 +30,7 @@ class Cart extends React.Component {
 
         PubSub.publish('PubSubCmenu',this.state.cmenu);
     }
-Notice
+
     componentDidMount(){
         this.pubsubCmenuObj = PubSub.subscribe('PubSubCmenu', function (topic,message) {
             this.setState({
