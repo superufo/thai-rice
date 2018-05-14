@@ -9,7 +9,7 @@ export default modelExtend(model, {
         headerInfo: {
             shopId: '',
             shopName: '',
-            logo: '',
+            logo: '../public/img/shop002.jpg',
             desc: '',
             owner: '',
             country: '',

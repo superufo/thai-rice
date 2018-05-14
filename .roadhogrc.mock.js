@@ -55,7 +55,7 @@ const proxy = {
             data: {
                 shopId: '1',
                 shopName: '大众餐馆',
-                logo: '../../assets/shop001.jpg',
+                logo:'../public/img/shop001.jpg',
                 desc: '大众餐馆,大众口味',
                 owner: 'wangxiaol',
                 country: '',

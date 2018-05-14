@@ -78,3 +78,5 @@ React.createElement(component, props, ...children);
 JSON.stringify() 方法是将一个JavaScript值(对象或者数组)转换为一个 JSON字符串
 
 初始赋值: React提供了一个dangerouslySetInnerHTML属性，可以实现inner赋值操作 无法通过id或class  。 
+
+todo : require() 无法加载 变量的图片。 里面为图片本地路径字符串 ，不能够为本地路径字符串的变量

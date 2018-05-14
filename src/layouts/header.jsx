@@ -61,13 +61,14 @@ class  Header  extends  React.Component  {
 
     render() {
         const { initData, show } = this.state;
+        const { logo } = this.props.headerInfo;
 
         let noticeControl = '';
         if(  this.props.notice.content!="" ){
              noticeControl = (<NoticeBar mode="link" onClick={() => alert('1')}>`{this.props.notice.title}:${this.props.notice.content}`</NoticeBar>);
         }
-        console.log("noticeControl：");
-        console.log(noticeControl);
+        console.log("logo：");
+        console.log(logo);
 
         const menuEl = (
             <Menu
@@ -105,7 +106,7 @@ class  Header  extends  React.Component  {
                         }
                         className= {styles.singleTopNavBar}
                     >
-                        <img src={this.props.headerInfo.logo} style={{height: '25px', width: '25px', marginRight: '5px'}} onClick={ ()=>{ e.stopPropagation();console.log('imglllllllllllllll');}   }  />
+                        <img src={require(`../public/img/shop001.jpg`)} style={{height: '25px', width: '25px', marginRight: '5px'}} onClick={ ()=>{ e.stopPropagation();console.log('imglllllllllllllll');}   }  />
                         <div style={{verticalAlign: 'middle', fontSize: '16px', color: '#ffffff'}}>
                             {this.props.headerInfo.shopName}
                         </div>
