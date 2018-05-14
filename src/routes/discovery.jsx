@@ -26,7 +26,7 @@ const Discovery = ({
                 onChange={(tab, index) => { console.log('onChange', index, tab); }}
                 onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
           >
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
+              <div style={{ display: 'flex', width:'100%',height: '100%', backgroundColor: '#fff' }}>
                   <Article />
               </div>
               <div style={{ width:'100%',height: '100%', alignItems: 'left', justifyContent: 'left',backgroundColor: '#fff' }}>

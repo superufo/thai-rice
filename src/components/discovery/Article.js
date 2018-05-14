@@ -1,17 +1,27 @@
-import { Tabs, WhiteSpace,List, Stepper } from 'antd-mobile';
+import { Tabs, WhiteSpace,Card,WingBlank,List } from 'antd-mobile';
 import PubSub from 'pubsub-js';
+import styles from './af.less';
 const Item = List.Item;
+const Brief = Item.Brief;
 
 class Article extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {tes:'tes'};
+        this.state = {articles:[{title:'',content:"",img:"",source:""},{}]};
     }
 
     render() {
-        return (<div>
-                2222222222222222222
-            </div>
+        return (<div style={{ width:'100%',height: '100%',backgroundColor: '#fff' }}>
+               <WingBlank size="lg">
+                  <List renderHeader={ () => (<div style={{align:'left',textAlign:'left'}} >article title <img src='' /><br/></div>) } style={{flexBasis: 'initial',}}>
+
+                            <Item extra={<img src='' style={{ width:'100%',height: '60px'}}/>} multipleLine align="top" wrap>
+                                Multiple line and long text will wrap. Long Text Long Text Long Text
+                            </Item>
+
+                  </List>
+                </WingBlank>
+               </div>
         );
     }
 }
