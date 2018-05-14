@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a48e32-ab21-4997-aaa8-c2f12945de62" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snap/discovery001.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snap/discovery002.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,8 +93,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="697">
-                <caret line="75" column="88" lean-forward="true" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
+              <first_editor relative-caret-position="765">
+                <caret line="79" column="70" lean-forward="true" selection-start-line="79" selection-start-column="70" selection-end-line="79" selection-end-column="70" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -429,12 +431,12 @@
       <workItem from="1524898781488" duration="894000" />
       <workItem from="1524899693778" duration="16021000" />
       <workItem from="1525007874230" duration="134390000" />
-      <workItem from="1525925103771" duration="132741000" />
+      <workItem from="1525925103771" duration="132945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284046000" />
+    <option name="totallyTimeSpent" value="284250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -989,8 +991,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="697">
-            <caret line="75" column="88" lean-forward="true" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
+          <first_editor relative-caret-position="765">
+            <caret line="79" column="70" lean-forward="true" selection-start-line="79" selection-start-column="70" selection-end-line="79" selection-end-column="70" />
             <folding />
           </first_editor>
           <second_editor />
