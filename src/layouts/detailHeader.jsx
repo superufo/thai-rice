@@ -31,7 +31,6 @@ class  DetailHeader  extends  React.Component  {
                      icon={<Icon type="left" />}
                      onLeftClick={this.handleBackClick.bind(this)}
                      rightContent={[
-                         <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
                          <Icon key="1" type="ellipsis" />,
                      ]}
                  >文章详情</NavBar>
