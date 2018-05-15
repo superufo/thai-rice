@@ -71,8 +71,8 @@ class  Header  extends  React.Component  {
         if(  this.props.notice.content!="" ){
              noticeControl = (<NoticeBar mode="link" onClick={() => alert('1')}>`{this.props.notice.title}:${this.props.notice.content}`</NoticeBar>);
         }
-        console.log("logo：");
-        console.log(logo);
+        // console.log("logo：");
+        // console.log(logo);
 
         const menuEl = (
             <Menu
@@ -92,7 +92,7 @@ class  Header  extends  React.Component  {
         );
 
         return (
-            <div className={show ? styles.singleMenuActive  : ''}  onClick={ ()=>{ console.log('div1111111   475475675676765767');}}>
+            <div className={show ? styles.singleMenuActive  : ''} >
                 <div onClick={ ()=>{ console.log('div222222   475475675676765767'); } }>
                     <NavBar
                         mode="light"
@@ -106,7 +106,7 @@ class  Header  extends  React.Component  {
                         onLeftClick={this.showLanguage}
                         onClick={this.showLanguage}
                         rightContent={
-                            <Icon key="0" type="ellipsis" onClick={ ()=>{ console.log('44444444'); alert(11111);} }  />
+                            <Icon key="0" type="ellipsis" onClick={ ()=>{ console.log('44444444'); alert(11111);} }/>
                         }
                         className= {styles.singleTopNavBar}
                     >

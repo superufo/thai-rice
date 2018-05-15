@@ -58,9 +58,9 @@ class Feedback extends React.Component {
 
         return (
             <form>
-                <div style={{ width:'100%',height: '200%', alignItems: 'left', justifyContent: 'left',backgroundColor: '#fff' }}>
+                <div style={{ width:'100%',height: '200%', alignItems: 'left', justifyContent: 'left',backgroundColor: '#fff',fontSize:'12px' }}>
                     <WingBlank>
-                        <List renderHeader={() => '留言信息'}>
+                        <List renderHeader={() => '留言信息'} >
                             <InputItem
                                 {...getFieldProps('money2', {
                                     normalize: (v, prev) => {
@@ -77,23 +77,23 @@ class Feedback extends React.Component {
                                 placeholder="money format"
                                 ref={el => this.customFocusInst = el}
                                 clear
-                            >最低价位</InputItem>
+                            > <span style={{fontSize:'14px'}}>最低价位</span></InputItem>
 
                             <InputItem
                                 {...getFieldProps('digit')}
                                 type="digit"
                                 placeholder="click to show native number keyboard"
-                            >最高价位</InputItem>
+                            ><span style={{fontSize:'14px'}}>最高价位</span></InputItem>
                         </List>
 
-                        <List renderHeader={() => '个人信息'}>
+                        <List renderHeader={() => '个人信息'} >
                             <InputItem
                                 type="text"
                                 clear
                                 placeholder="name"
                                 ref={el => this.autoFocusInst = el}
                                 value=""
-                             >姓名</InputItem>
+                             ><span style={{fontSize:'14px'}}>姓名</span></InputItem>
                             <InputItem
                                 type="phone"
                                 placeholder="input your phone"
@@ -101,7 +101,7 @@ class Feedback extends React.Component {
                                 onErrorClick={this.onErrorClick}
                                 onChange={this.onChangeMobile}
                                 value={this.state.mobile}
-                            >手机号码</InputItem>
+                            ><span style={{fontSize:'14px'}}>手机号码</span></InputItem>
                         </List>
 
                     <WhiteSpace size="xl" />

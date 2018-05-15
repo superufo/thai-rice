@@ -12,17 +12,8 @@ const Index =  ({
 }) => {
    const {menu,adv}= index;
    //const isLoading = loading.effects['index/query'];
-
-    console.log("index：");
-    console.log(index);
-    //
-    // let noticeControl = '<div></div>';
-    // if(  notice.content!="" ){
-    //      noticeControl = (<div style={{position:'fixed',top:'50',paddingTop:'50px',width:'100%',height:'30px',background:'#f30',}}> <NoticeBar mode="link" onClick={() => alert('1')}>`{notice.title}:${notice.content}`</NoticeBar></div>);
-    // }
-    //
-    // console.log("noticeControl：");
-    // console.log(noticeControl);
+    // console.log("index：");
+    // console.log(index);
 
    return (
         <div>

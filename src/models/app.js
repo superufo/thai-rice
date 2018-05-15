@@ -43,8 +43,8 @@ export default modelExtend(model, {
             });
 
             const noticeResponse = yield call(queryNotice, payload);
-            console.log('noticeResponse.data');
-            console.log(noticeResponse.data);
+            // console.log('noticeResponse.data');
+            // console.log(noticeResponse.data);
 
             if (noticeResponse.status != 'ok') {
                 throw noticeResponse.data;

@@ -69,7 +69,7 @@ export default function request(url, options) {  console.log('request url0000:'+
         .then(checkStatus)
         .then(response => {
             let res= response.json();
-            console.log(res);
+            //console.log(res);
 
             if (newOptions.method === 'DELETE' || response.status === 204) {
                 return response.text();
