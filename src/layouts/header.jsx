@@ -33,10 +33,16 @@ class  Header  extends  React.Component  {
         console.log(label);
     }
 
-    showLanguage = (e)=>{
+    showLanguage = (e)=>{   alert(222222222);
         //console.log("e:");
         //console.log(e);
-        e.preventDefault(); // Fix event propagation on Android
+        if (e.cancelable) {
+            // 判断默认行为是否已经被禁用
+            if (!e.defaultPrevented) {
+                e.preventDefault();
+            }
+        }
+            alert(11111111);
         //e.stopPropagation();
         this.setState({
             show: !this.state.show,
@@ -49,8 +55,6 @@ class  Header  extends  React.Component  {
                 });
             }, 500);
         }
-
-        e.stopPropagation();
     }
 
     onMaskClick = () => {
@@ -106,7 +110,7 @@ class  Header  extends  React.Component  {
                         }
                         className= {styles.singleTopNavBar}
                     >
-                        <img src={require(`../public/img/shop001.jpg`)} style={{height: '25px', width: '25px', marginRight: '5px'}} onClick={ ()=>{ e.stopPropagation();console.log('imglllllllllllllll');}   }  />
+                        <img src={require(`../public/img/shop001.jpg`)} style={{height: '25px', width: '25px', marginRight: '5px'}} onClick={ ()=>{console.log('imglllllllllllllll');}} />
                         <div style={{verticalAlign: 'middle', fontSize: '16px', color: '#ffffff'}}>
                             {this.props.headerInfo.shopName}
                         </div>
@@ -118,7 +122,6 @@ class  Header  extends  React.Component  {
                 {show ? initData ? menuEl : loadingEl : '' }
                 {show ? <div className={styles.menuMask}  onClick={this.onMaskClick} /> : ''}
 
-                {this.props.childrens}
             </div>
         );
     }

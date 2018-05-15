@@ -27,7 +27,7 @@ const Discovery = ({
                 onTabClick={(tab, index) => {}}
           >
               <div style={{width:'100%',height: '100%', backgroundColor: '#fff' }}>
-                  <Article />
+                  <Article dispatch={dispatch}/>
               </div>
               <div style={{ width:'100%',height: '100%', alignItems: 'left', justifyContent: 'left',backgroundColor: '#fff' }}>
                   <Feedback />

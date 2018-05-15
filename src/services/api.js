@@ -17,7 +17,13 @@ export async function queryNotice(params) {
     return request('/api/getNotice', {method: 'GET', body: params});
 }
 
+export async function queryArticles(params) {
+    return request('/api/getArticles', {method: 'GET', body: params});
+}
 
+export async function queryArticleById(params) {
+    return request('/api/getArticleById', {method: 'GET', body: params});
+}
 
 // export async function addRule(params) {
 //   return request('/api/rule', {

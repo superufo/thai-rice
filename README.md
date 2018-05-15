@@ -80,3 +80,15 @@ JSON.stringify() 方法是将一个JavaScript值(对象或者数组)转换为一
 初始赋值: React提供了一个dangerouslySetInnerHTML属性，可以实现inner赋值操作 无法通过id或class  。 
 
 todo : require() 无法加载 变量的图片。 里面为图片本地路径字符串 ，不能够为本地路径字符串的变量
+
+事件处理函数中调用了 stopPropagation()，那么之后的元素就无法接收这个事件，也即是剩余的事件处理函数永远不会得到执行.
+个 a 标签绑其 click 事件的默认行为是跳转到 href 指定的链接.preventDefault()，那么元素的默认行为就会被取消
+event.cancelable 浏览器默认行为是否可以被禁用  event.defaultPrevented 浏览器默认行为是否已经被禁用
+ if (event.cancelable) {
+        // 判断默认行为是否已经被禁用
+        if (!event.defaultPrevented) {
+            event.preventDefault();
+        }
+  }
+  
+slice()、substring()、substr()

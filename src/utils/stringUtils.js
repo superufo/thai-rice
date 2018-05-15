@@ -29,9 +29,14 @@ StringUtils.isEmpty = function (obj) {
 }
 
 
-
-
-
-
+StringUtils.in_array = function (stringToSearch, arrayToSearch) {
+    for (var s = 0; s < arrayToSearch.length; s++) {
+         var thisEntry = arrayToSearch[s].toString();
+        if (thisEntry == stringToSearch) {
+            return true;
+        }
+    }
+    return false;
+}
 
 export default  StringUtils;

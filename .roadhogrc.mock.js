@@ -1,6 +1,7 @@
 import  mockjs  from 'mockjs';
 import { getMenu } from './mock/menu';
 import { getNotice } from './mock/notice';
+import { getArticles,getArticleById } from './mock/article';
 import { format, delay } from 'roadhog-api-doc';
 
 const Random =  mockjs.Random;
@@ -17,7 +18,22 @@ const proxy = {
             data: getNotice
         });
     },
-    // 支持值为 Object 和 Array
+
+    // 'GET /api/getArticles':(req, res) => {
+    //     res.send({
+    //         status: 'ok',
+    //         msg: '成功',
+    //         data: getArticles
+    //     });
+    // },
+    // 'GET /api/getArticleById':(req, res) => {
+    //     res.send({
+    //         status: 'ok',
+    //         msg: '成功',
+    //         data: getArticleById
+    //     });
+    // },
+
     'GET /api/getmenu':(req, res) => {
         res.send({
             status: 'ok',
