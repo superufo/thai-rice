@@ -15,6 +15,9 @@ import config  from '../utils/config.js';
 
 const {appIndex} = config;
 
+const testclicka = (e) => { console.log('e:',e.target) ;  alert(1111); }
+const testclickb = (e) => { console.log('e:',e.target) ;  alert(2222); }
+
 const App = ({
     children, dispatch, app, loading, location,history
 }) => {
@@ -27,11 +30,16 @@ const App = ({
     pathname = pathname.startsWith('/') ? pathname : `/${pathname}`;
     //console.log("pathname:");console.log(pathname);
     //pathname = 'article'
+
     if( stringUtils.in_array(pathname, appIndex)==true ) {
         return (
-            <div>
-                <Header location={location} headerInfo={headerInfo} notice={notice}/>
-                <Footer location={location} childrens={children}/>
+            <div onClick={testclicka}>
+                <div onClick={testclickb}>
+                    <Header location={location} headerInfo={headerInfo} notice={notice}/>
+                </div>
+                <div>
+                    <Footer location={location} childrens={children}/>
+                </div>
             </div>
         );
     }else{

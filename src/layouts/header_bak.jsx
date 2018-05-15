@@ -42,7 +42,7 @@ class  Header  extends  React.Component  {
                 e.preventDefault();
             }
         }
-            alert(11111111);
+        alert(11111111);
         //e.stopPropagation();
         this.setState({
             show: !this.state.show,
@@ -69,7 +69,7 @@ class  Header  extends  React.Component  {
 
         let noticeControl = '';
         if(  this.props.notice.content!="" ){
-             noticeControl = (<NoticeBar mode="link" onClick={() => alert('1')}>`{this.props.notice.title}:${this.props.notice.content}`</NoticeBar>);
+            noticeControl = (<NoticeBar mode="link" onClick={() => alert('1')}>`{this.props.notice.title}:${this.props.notice.content}`</NoticeBar>);
         }
         // console.log("logo：");
         // console.log(logo);
