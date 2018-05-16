@@ -16,6 +16,15 @@ class  Header  extends  React.Component  {
         };
     }
 
+    componentDidMount(){
+        document.body.addEventListener('click', this._onBlurHandler, false);
+
+    }
+
+    componentWillUnmount(){
+        document.body.removeEventListener('click', this._onBlurHandler, false);
+    }
+
     changeLanguage = (value) => {
         let label = '';
         languages.forEach((dataItem) => {
@@ -33,16 +42,16 @@ class  Header  extends  React.Component  {
         console.log(label);
     }
 
-    showLanguage = (e)=>{   alert(222222222);
+    showLanguage = (e)=>{
         //console.log("e:");
         //console.log(e);
-        if (e.cancelable) {
-            // 判断默认行为是否已经被禁用
-            if (!e.defaultPrevented) {
-                e.preventDefault();
-            }
-        }
-            alert(11111111);
+        // if (e.cancelable) {
+        //     // 判断默认行为是否已经被禁用
+        //     if (!e.defaultPrevented) {
+        //         e.preventDefault();
+        //     }
+        // }
+
         //e.stopPropagation();
         this.setState({
             show: !this.state.show,
@@ -97,7 +106,7 @@ class  Header  extends  React.Component  {
                     <NavBar
                         mode="light"
                         icon={<img src="https://gw.alipayobjects.com/zos/rmsportal/iXVHARNNlmdCGnwWxQPH.svg" className="am-icon am-icon-md" alt="" />}
-                        leftContent={<div style={{verticalAlign: 'middle', fontSize: '16px'}}>
+                        leftContent={<div style={{verticalAlign: 'middle', fontSize: '16px'}} onClick={this.showLanguage}>
                             {this.state.languageLabel}
                             <svg className={styles.iconSvg} aria-hidden="true" >
                                 <use xlinkHref="#down" />

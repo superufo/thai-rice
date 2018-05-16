@@ -92,3 +92,5 @@ event.cancelable 浏览器默认行为是否可以被禁用  event.defaultPreven
   }
   
 slice()、substring()、substr()
+
+React.findDOMNode(this.refs.myTextInput).focus();  delete this.nativeEvent;delete this.preventDefault; delete this.stopPropagation;

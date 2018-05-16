@@ -42,7 +42,6 @@ class MenuCarousel extends React.Component {
                                 style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
                             >
                                 <img
-
                                     src={item.imagin}
                                     alt=""
                                     style={{ width: '100%', verticalAlign: 'top' }}

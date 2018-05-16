@@ -20,7 +20,7 @@ const Discovery = ({
   const isLoading = loading.effects['discovery/query'];
 
   return (
-      <div className={styles.normal} style={{ fontFamily: 'Georgia, sans-serif', textAlign: 'center', paddingTop:'35px',marginTop:'45px',}} >
+      <div  style={{ fontFamily: 'Georgia, sans-serif', textAlign: 'center'}} >
           <Tabs tabs={tabs}
                 initialPage={1}
                 onChange={(tab, index) => {} }

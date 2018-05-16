@@ -16,8 +16,8 @@ const Index =  ({
     // console.log(index);
 
    return (
-        <div>
-            <div className={styles.normal}  style={{ fontFamily: 'Georgia, sans-serif', textAlign: 'center', paddingTop:'35px',marginTop:'45px',}}   >
+        <div style={{}}>
+            <div  style={{fontFamily: 'Georgia, sans-serif', textAlign: 'center',}}   >
                 <MenuCarousel advData={adv}  />
             </div>
             <div className={styles.bodynormal}  >

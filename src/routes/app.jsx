@@ -15,8 +15,8 @@ import config  from '../utils/config.js';
 
 const {appIndex} = config;
 
-const testclicka = (e) => { console.log('e:',e.target) ;  alert(1111); }
-const testclickb = (e) => { console.log('e:',e.target) ;  alert(2222); }
+const testclicka = (e) => {  console.log('1111 e:',e.target) ;   }
+const testclickb = (n) => { console.log('222222 n:',n.target) ;   }
 
 const App = ({
     children, dispatch, app, loading, location,history
@@ -34,17 +34,16 @@ const App = ({
     if( stringUtils.in_array(pathname, appIndex)==true ) {
         return (
             <div onClick={testclicka}>
-                <div onClick={testclickb}>
+                <div onClick={testclickb}  style={{height:'12%'}}>
                     <Header location={location} headerInfo={headerInfo} notice={notice}/>
                 </div>
-                <div>
+                <div style={{position: 'fixed', height: '88%', width: '100%', top: '',}}  >
                     <Footer location={location} childrens={children}/>
                 </div>
             </div>
         );
     }else{
-        const title = [''];
-
+        //console.log("other page");
         return (
             <div>
                 <Detailheader location={location} dispatch={dispatch} history={history}  headerInfo={headerInfo}/>
@@ -61,4 +60,7 @@ App.propTypes = {
 
 //export default App;   <Loader fullScreen spinning={loading.effects['app/query']} />
 //export default connect(({ app, loading  }) => ({ app, loading  }))(App);
+
+//
+
 export default withRouter(connect(({ app, loading }) => ({ app, loading }))(App))

@@ -10,7 +10,6 @@ function Footer({
           childrens,dispatch,location
 }) {
   return (
-    <div className={styles.normal}>
       <TabBar
         unselectedTintColor="#949494"
         tintColor="#33A3F4"
@@ -112,7 +111,6 @@ function Footer({
           {childrens}
         </TabBar.Item>
       </TabBar>
-    </div>
   );
 }
 
